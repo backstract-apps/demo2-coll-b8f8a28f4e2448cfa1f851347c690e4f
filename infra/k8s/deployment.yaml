@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo2-coll-b8f8a28f4e2448cfa1f851347c690e4f-depl
+  labels:
+    app: demo2-coll-b8f8a28f4e2448cfa1f851347c690e4f
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo2-coll-b8f8a28f4e2448cfa1f851347c690e4f
+  template:
+    metadata:
+      labels:
+        app: demo2-coll-b8f8a28f4e2448cfa1f851347c690e4f
+    spec:
+      containers:
+        - name: demo2-coll-b8f8a28f4e2448cfa1f851347c690e4f
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:demo2-coll-b8f8a28f4e2448cfa1f851347c690e4f
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9040

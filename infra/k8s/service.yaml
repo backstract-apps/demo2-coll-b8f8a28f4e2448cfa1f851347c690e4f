@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo2-coll-b8f8a28f4e2448cfa1f851347c690e4f-srv
+spec:
+  selector:
+    app: demo2-coll-b8f8a28f4e2448cfa1f851347c690e4f
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9040
+  type: ClusterIP
